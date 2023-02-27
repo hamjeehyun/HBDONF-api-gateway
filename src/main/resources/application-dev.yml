@@ -1,0 +1,23 @@
+application:
+  workspace: DEV
+  port: 1013
+  ip:
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+database:
+  url: jdbc:mariadb://localhost:3306/hbd_onf_jswtt
+  username: root
+  password: root
+
+firebase:
+  path: ""
+  key: ""
+
+logging:
+  lovel: DEBUG
+
+

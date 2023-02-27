@@ -1,0 +1,17 @@
+application:
+  workspace: PROD
+  port: 1013
+  ip:
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+firebase:
+  path: ""
+  key: ""
+
+logging:
+  lovel: INFO
+

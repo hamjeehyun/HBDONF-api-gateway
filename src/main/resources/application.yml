@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: HBDONF-api-gateway
+
+server:
+  port: 6004
+
+zuul:
+  sensitive-headers: Cookie,Set-Cookie
+  ignore-security-headers: false
+  add-host-header: true
+  add-proxy-headers: true
+
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${application.ip}:8003/eureka
+    enabled: true
+
+firebase:
+  path: ${firebase.path}
+  key: ${firebase.key}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
